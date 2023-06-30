@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Codigo2;
+
 use App\Http\Controllers\CrudController;
-use App\Http\Controllers\Hospital;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('matriz', [Codigo2::class,'matriz'])->name('matriz');
 
-Route::get('hospital', [Hospital::class,'datos']);
 
 Route::controller(CrudController::class)->group( function(){
 
@@ -39,8 +37,4 @@ Route::controller(CrudController::class)->group( function(){
 
 
 
-Route::get('prueba', [CrudController::class,'calculate']);
-
-Route::get('mostrar/{numero}/{data?}', [CrudController::class,'numero']);
-Route::get('mostrar', [CrudController::class,'mostrar']);
 
